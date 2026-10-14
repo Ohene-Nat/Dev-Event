@@ -47,12 +47,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-blue: var(--color-blue);
-  --color-light-100: var(--color-light-100);
-  --color-light-200: var(--color-light-200);
-  --color-border-dark: var(--color-border-dark);
-  --color-dark-100: var(--color-dark-100);
-  --color-dark-200: var(--color-dark-200);
+  --color-blue: #94eaff;
+  --color-light-100: #e7f2ff;
+  --color-light-200: #bdbdbd;
+  --color-border-dark: #151024;
+  --color-dark-100: #0d161a;
+  --color-dark-200: #182830;
   --font-schibsted-grotesk: var(--font-schibsted-grotesk);
   --font-martian-mono: var(--font-martian-mono);
   --color-sidebar-ring: var(--sidebar-ring);
