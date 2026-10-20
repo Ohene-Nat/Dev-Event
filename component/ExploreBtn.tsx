@@ -1,14 +1,28 @@
 'use client'
 
 import Image from 'next/image'
+import posthog from 'posthog-js'
+import { posthogLogger } from '@/lib/posthog-logger'
 
 const ExploreBtn = () => {
+    const handleExplore = () => {
+        if (
+            process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN &&
+            process.env.NEXT_PUBLIC_POSTHOG_HOST
+        ) {
+            posthog.capture('events_explored')
+            posthogLogger.info('event listing exploration requested', {
+                action: 'explore_events',
+            })
+        }
+    }
+
     return (
         <button
             type="button"
             id="explore-btn"
             className="mt-7 mx-auto"
-            onClick={() => console.log('CLICK')}
+            onClick={handleExplore}
         >
             <a href="#events">
                 Explore Events
